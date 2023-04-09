@@ -1,22 +1,21 @@
 <template>
- <div>
-<Header />  
-
- <Transition>
- <router-view></router-view>
- </Transition>
- </div>
+  <div>
+    <Layout>
+  
+        <router-view></router-view>
+ 
+    </Layout>
+  </div>
 </template>
 
 <script setup>
-import Header from '@/components/Header.vue';
-
+import Layout from "@/components/Layout.vue";
 </script>
 
-<style  scoped> 
+<style  scoped>
 .v-enter-active,
 .v-leave-active {
-  transition: opacity .6s ease-in-out;
+  transition: opacity 0.6s ease-in-out;
 }
 
 .v-enter-from,
