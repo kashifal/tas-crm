@@ -45,7 +45,7 @@
           <div class="flex flex-col">
             <p class="text-2xl font-semibold text-iconColor">{{ item.stat }}</p>
             <p class="truncate text-sm block font-medium text-iconColor">{{ item.name }}</p>
-            <a class="truncate text-xs font-normal text-sky-600">view ads</a>
+            <a class="truncate text-xs font-normal text-sky-600">view leads</a>
           </div>
         </dd>
       </div>
