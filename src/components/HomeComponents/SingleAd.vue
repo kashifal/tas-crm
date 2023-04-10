@@ -40,11 +40,11 @@
         </div>
 
         <div class="overflow-x-auto px-2">
-          <div class="group min-w-full rounded-lg gap-8 xl:grid-cols-2 grid grid-cols-1">
+          <div class="group min-w-full rounded-lg gap-4 xl:grid-cols-2 grid grid-cols-1">
             <div class="flex min-w-full rounded-md flex-col gap-4 bg-gray-50 py-6 px-4 mt-4">
               <div class="flex items-center gap-x-6 justify-between">
                 <div class="flex items-center whitespace-nowrap gap-4">
-                  <Icon class="text-primary text-2xl md:text-3xl" icon="ic:baseline-facebook" />
+                  <Icon class="text-blue-500 text-2xl md:text-3xl" icon="ic:baseline-facebook" />
                   <h1
                     class="text-sm md:text-lg text-iconColor font-light whitespace-nowrap"
                   >Acct# 65461234234</h1>
