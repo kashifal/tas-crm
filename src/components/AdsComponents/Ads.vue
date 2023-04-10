@@ -1,12 +1,7 @@
 <template>
-  <div class="bg-white pt-24 sm:pt-32">
+  <div class="bg-white ">
     <div class>
-      <div class>
-        <div class="flex items-center gap-4">
-          <Recent />
-          <h3 class="text-base font-medium leading-6 text-primary">Recent Ads</h3>
-        </div>
-      </div>
+      
       <div class="mt-8">
         <SingleAd />
       </div>
@@ -17,6 +12,7 @@
 <script setup>
 import Recent from "@/components/svgs/Recent.vue";
 import SingleAd from "@/components/SingleAd.vue";
+
 const posts = [
   {
     id: 1,
