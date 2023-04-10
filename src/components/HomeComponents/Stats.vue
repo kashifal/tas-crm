@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="flex items-center justify-between">
-      <div class="flex items-center gap-4">
+    <div class="flex md:items-center justify-between flex-col gap-4 md:flex-row">
+      <div class="flex items-center   gap-4">
         <snapshot />
         <h3 class="text-base font-medium leading-6 text-primary">Snapshot</h3>
       </div>
-       <div class="flex items-center gap-4 bg-gray-50 px-4 py-2 rounded-md">
+       <div class="flex md:items-center gap-4 flex-col md:flex-row bg-gray-50 px-4 py-2 rounded-md">
         <div class="flex items-center gap-2">
          <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -21,20 +21,20 @@
                     d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"
                   />
                 </svg>
-        <h3 class="text-base font-medium leading-6 text-iconColor">Filter Period</h3>
+        <h3 class="md:text-base text-xs font-medium leading-6 text-iconColor">Filter Period</h3>
         </div>
 
-        <select name="" id="" class="px-8 bg-transparent text-iconColor text-sm">
+        <select name="" id="" class="md:px-8 bg-transparent text-iconColor text-sm">
         <option value="1">All Time</option>
         </select>
       </div>
     </div>
 
-    <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+    <dl class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
       <div
         v-for="item in stats"
         :key="item.id"
-        class="relative overflow-hidden rounded-lg bg-white px-4 pb-12 pt-5 ring-1 ring-gray-100 shadow-sm sm:px-6 sm:pt-6"
+        class="relative overflow-hidden  rounded-lg bg-white px-4 pb-4 pt-5 ring-1 ring-gray-100 shadow-sm sm:px-6 sm:pt-6"
       >
         <dt>
           <div class="absolute rounded-full bg-primary/40 p-5">

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white p-6 shadow-sm rounded-md">
+  <div class="bg-white md:p-6 p-2 shadow-sm rounded-md">
   <Stats />
   <Ads />
   </div>

@@ -7,7 +7,9 @@
           <h3 class="text-base font-medium leading-6 text-primary">Recent Ads</h3>
         </div>
       </div>
-      <SingleAd /> 
+      <div class="mt-8">
+      <SingleAd />
+      </div> 
     </div>
   </div>
 </template>
