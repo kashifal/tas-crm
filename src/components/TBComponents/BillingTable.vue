@@ -1,8 +1,8 @@
 <template> 
-  <div class=" border rounded-lg  -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+  <div class=" border rounded-2xl  -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
      
-    <div class="inline-block border rounded-lg  min-w-full py-2 align-middle sm:px-6 lg:px-8 ">
-      <table class="min-w-full border rounded-lg divide-y divide-gray-300">
+    <div class="inline-block border rounded-2xl  min-w-full py-2 align-middle sm:px-6 lg:px-8 ">
+      <table class="min-w-full border rounded-2xl divide-y divide-gray-300">
         <thead>
           <tr>
             <th scope="col" class="px-3 py-3.5 text-left text-sm font-medium text-gray-500">ID</th>
@@ -15,7 +15,7 @@
           </tr>
         </thead>
         <tbody class="divide-y divide-gray-200 bg-white">
-          <tr v-for="bill in Billings" :key="bill.Assignee">
+          <tr v-for="bill in Billings" :key="bill.Assignee" class="cursor-pointer hover:bg-gray-100" @click="navigateToPage('/billing-info')">
             
             <td class=" px-3 py-4 text-sm text-gray-500 lg:table-cell whitespace-nowrap">{{ bill.id }}</td>
             <td class=" px-3 py-4 text-sm text-gray-500 sm:table-cell whitespace-nowrap">{{ bill.Priority === 0 ? 'P1' : 'P2' }}</td>
@@ -92,6 +92,8 @@
 <script setup>
 
 import { ref } from 'vue'
+import { useRouter } from 'vue-router';
+
 import { Listbox, ListboxButton, ListboxLabel, ListboxOption, ListboxOptions } from '@headlessui/vue'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/vue/20/solid'
 import Progress from '@/components/svgs/Progress.vue';
@@ -108,6 +110,12 @@ const people = [
 
 const selected = ref([])
 
+
+const router = useRouter();
+
+    const navigateToPage = (path) => {
+      router.push(path);
+    };
 
 setInterval(() => {
     console.log(selected.value);

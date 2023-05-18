@@ -41,7 +41,7 @@
               </span>
             </span>
             <span
-              class="ml-4 min-w-0 flex-col  ring-1 mt-1 ring-slate-100 mr-4 w-full p-3 rounded-md shadow-md grid md:grid-cols-2 gap-8 md:gap-4"
+              class="ml-4 min-w-0 flex-col  ring-1 mt-1 ring-slate-100 mr-4 w-full p-3 rounded-2xl shadow-xl grid md:grid-cols-2 gap-8 md:gap-4"
             >
               <div class="space-y-4">
                 <div class>

@@ -277,10 +277,10 @@ import BellIconO from '@/components/svgs/BellIcon.vue'
 
 
 const navigation = [
-  { name: "Dashboard", href: "#", icon: Dashboard, current: true },
+  { name: "Dashboard", href: "/", icon: Dashboard, current: true },
   { name: "Companies", href: "#", icon: Ads, current: false },
   { name: "Contacts", href: "#", icon: users, current: false },
-  { name: "Tickets", href: "#", icon: Settings, current: false }
+  { name: "Tickets", href: "/tickets-billing", icon: Settings, current: false }
 ];
 const teams = [
   { id: 1, name: "Heroicons", href: "#", initial: "H", current: false },

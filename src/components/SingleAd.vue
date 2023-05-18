@@ -21,7 +21,7 @@
           class="absolute inset-0 lg:rounded-tl-2xl lg:rounded-bl-2xl ring-1 ring-inset ring-gray-900/10"
         />
         <div
-          class="absolute bottom-4 right-4 w-16 h-8 bg-gray-700 rounded-lg flex gap-2 items-center justify-center"
+          class="absolute bottom-4 right-4 w-16 h-8 bg-gray-700 rounded-2xl flex gap-2 items-center justify-center"
         >
           <p class="text-md font-normal text-white font-nedium">4</p>
           <Icon icon="solar:gallery-broken" class="text-white" />
@@ -40,7 +40,7 @@
         </div>
 
         <div class="overflow-x-auto px-2">
-          <div class="group min-w-full rounded-lg gap-4 xl:grid-cols-2 grid grid-cols-1">
+          <div class="group min-w-full rounded-2xl gap-4 xl:grid-cols-2 grid grid-cols-1">
             <div class="flex min-w-full rounded-md flex-col gap-4 bg-gray-50 py-6 px-4 mt-4">
               <div class="flex items-center gap-x-6 justify-between">
                 <div class="flex items-center whitespace-nowrap gap-4">
