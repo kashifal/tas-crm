@@ -7,8 +7,10 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        primary:'#27B78D',
-        iconColor:'#53545C'
+        primary:'#00709C',
+        iconColor:'#737E83',
+        primaryGreen:'#2E9E20',
+        primaryGray:'#EFEFF0'
       },
       width:{
         w18 : '72px'

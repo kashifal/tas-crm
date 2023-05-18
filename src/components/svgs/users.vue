@@ -1,39 +1,9 @@
 <template>
   <div>
-    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M7.99293 12.6723C11.0671 12.6723 13.6946 13.1382 13.6946 14.999C13.6946 16.8598 11.0846 17.339 7.99293 17.339C4.91793 17.339 2.29126 16.8773 2.29126 15.0157C2.29126 13.154 4.90043 12.6723 7.99293 12.6723Z"
-        stroke="currentcolor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M7.99289 10.0165C5.97456 10.0165 4.33789 8.38066 4.33789 6.36233C4.33789 4.34399 5.97456 2.70816 7.99289 2.70816C10.0104 2.70816 11.6471 4.34399 11.6471 6.36233C11.6546 8.37316 10.0296 10.009 8.01872 10.0165H7.99289Z"
-        stroke="currentcolor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        d="M13.736 9.06799C15.0701 8.88049 16.0976 7.73549 16.1001 6.34966C16.1001 4.98382 15.1043 3.85049 13.7985 3.63632"
-        stroke="currentcolor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        d="M15.4962 12.2768C16.7887 12.4693 17.6912 12.9227 17.6912 13.856C17.6912 14.4985 17.2662 14.9152 16.5795 15.176"
-        stroke="currentcolor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
+    <svg  viewBox="0 0 24 24" class="hover:text-primary" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 1C5.34315 1 4 2.34315 4 4V6H3C2.44772 6 2 6.44772 2 7C2 7.55228 2.44772 8 3 8H4V11H3C2.44772 11 2 11.4477 2 12C2 12.5523 2.44772 13 3 13H4V16H3C2.44772 16 2 16.4477 2 17C2 17.5523 2.44772 18 3 18H4V20C4 21.6569 5.34315 23 7 23H19C20.6569 23 22 21.6569 22 20V4C22 2.34315 20.6569 1 19 1H7ZM15 9C15 10.1046 14.1046 11 13 11C11.8954 11 11 10.1046 11 9C11 7.89543 11.8954 7 13 7C14.1046 7 15 7.89543 15 9ZM9.00001 15.0001C9.00007 16.1046 9.89548 17 11 17H15C16.1046 17 17 16.1046 17 15C17 13.8954 16.1046 13 15 13H11C9.89541 13 8.99996 13.8955 9.00001 15.0001Z" fill="currentcolor"/>
+</svg>
+
   </div>
 </template>
 

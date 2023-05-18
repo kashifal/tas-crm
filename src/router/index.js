@@ -1,6 +1,8 @@
-import { createRouter, createWebHistory } from "vue-router";
-import Dashboard from '@/views/Dashboard.vue';
-import Ads from '@/views/AdsView.vue';
+import { createRouter, createWebHistory } from "vue-router"; 
+// import Ads from '@/views/AdsView.vue';
+import CompanyDetail from '@/views/CompanyDetail.vue';
+import  TicketsBilling from '@/views/TicketsBilling.vue';
+import BillingInfo from '@/views/BillingInfo.vue';
  
 
 const router = createRouter({
@@ -8,14 +10,20 @@ const router = createRouter({
     routes: [
         {
             path: '/',
-            name: 'home',
-            component: Dashboard
+            name: 'CompanyDetail',
+            component: CompanyDetail
         },
         {
-            path: '/ads',
-            name: 'Ads',
-            component: Ads
-        }
+            path: '/tickets-billing',
+            name: 'tickets-billing',
+            component: TicketsBilling
+        },
+        {
+            path: '/billing-info',
+            name: 'billing-info',
+            component: BillingInfo
+        },
+        
     ]
 })
 
