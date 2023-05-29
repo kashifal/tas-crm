@@ -117,9 +117,7 @@ const router = useRouter();
       router.push(path);
     };
 
-setInterval(() => {
-    console.log(selected.value);
-},4000)
+
 
 
 

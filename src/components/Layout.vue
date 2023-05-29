@@ -55,13 +55,13 @@
                     <li>
                       <ul role="list" class="-mx-2 space-y-1">
                         <li v-for="item in navigation" :key="item.name">
-                          <a
-                            :href="item.href"
+                          <router-link 
+                            :to="item.href"
                             :class="[item.current ? 'text-primary' : 'text-iconColor hover:text-primary', 'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold']"
                           >
                             <component :is="item.icon" class="h-6 w-6 shrink-0" aria-hidden="true" />
                             {{ item.name }}
-                          </a>
+                          </router-link>
                         </li>
                       </ul>
                     </li>
@@ -101,8 +101,8 @@
             <li>
               <ul role="list" class="-mx-2 space-y-4">
                 <li v-for="item in navigation" :key="item.name" class="">
-                  <a
-                    :href="item.href"
+                  <router-link
+                    :to="item.href"
                     :class="[item.current ? 'text-primary border-r-2 border-primary' : 'text-iconColor  hover:text-red-500', 'group flex gap-x-3 py-1 px-6 text-sm leading-6 font-semibold']"
                   >
                     <component
@@ -110,7 +110,7 @@
                       class="h-6 w-6 shrink-0 group-hover:text-primary"
                       aria-hidden="true"
                     />
-                  </a>
+                  </router-link>
                 </li>
               </ul>
             </li>
@@ -232,7 +232,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, computed, watch } from "vue";
 import {
   Dialog,
   DialogPanel,
@@ -273,15 +273,35 @@ import Settings from "@/components/svgs/Settings.vue";
 import Play from "@/components/svgs/Play.vue";
 import MenuIcon from "@/components/svgs/Menu.vue";
 import Usa from '@/components/svgs/Usa.vue';
+  
+import { useRouter } from 'vue-router';
+
+
 import BellIconO from '@/components/svgs/BellIcon.vue'
+const router = useRouter() 
+ 
+const currentRoute = ref(router.currentRoute.value);
+const navigation = ref([
+  { name: "Dashboard", href: "/", icon: Dashboard, current: currentRoute.value.fullPath === "/" },
+  { name: "Companies", href: "/companies-page", icon: Ads, current: currentRoute.value.fullPath === "/companies-page" },
+  { name: "Contacts", href: "/contacts", icon: users, current: currentRoute.value.fullPath === "/contacts" },
+  { name: "Tickets", href: "/tickets-billing", icon: Settings, current: currentRoute.value.fullPath === "/tickets-billing" }
+]);
+
+watch(() => router.currentRoute.value, (to, from) => {
+  currentRoute.value = to;
+  navigation.value = [
+  { name: "Dashboard", href: "/", icon: Dashboard, current: currentRoute.value.fullPath === "/" },
+  { name: "Companies", href: "/companies-page", icon: Ads, current: currentRoute.value.fullPath === "/companies-page" },
+  { name: "Contacts", href: "/contacts", icon: users, current: currentRoute.value.fullPath === "/contacts" },
+  { name: "Tickets", href: "/tickets-billing", icon: Settings, current: currentRoute.value.fullPath === "/tickets-billing" }
+]
+  console.log(currentRoute.value.fullPath, 'route');
+});
+
+console.log(currentRoute.value.fullPath, 'outside');
 
 
-const navigation = [
-  { name: "Dashboard", href: "/", icon: Dashboard, current: true },
-  { name: "Companies", href: "#", icon: Ads, current: false },
-  { name: "Contacts", href: "#", icon: users, current: false },
-  { name: "Tickets", href: "/tickets-billing", icon: Settings, current: false }
-];
 const teams = [
   { id: 1, name: "Heroicons", href: "#", initial: "H", current: false },
   { id: 2, name: "Tailwind Labs", href: "#", initial: "T", current: false },
