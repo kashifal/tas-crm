@@ -7,10 +7,13 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        primary:'#00709C',
-        iconColor:'#737E83',
-        primaryGreen:'#2E9E20',
-        primaryGray:'#EFEFF0'
+        primary:'#ff8d07',
+        lighter:'#ffff',
+        primaryGreen:'#8fbc8f',
+        primaryGray:'#EFEFF0',
+        surface:'#212c47'
+
+        
       },
       width:{
         w18 : '72px'

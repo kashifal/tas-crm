@@ -7,3 +7,12 @@
 *{
     font-family: 'Poppins', sans-serif;
 }
+
+body
+{
+    background-color: #1a2339 !important;
+}
+
+a{
+    color: white;
+}

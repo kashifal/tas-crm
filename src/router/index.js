@@ -1,13 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router";
-import CompanyDetail from '@/views/CompanyDetail.vue';
-import TicketsBilling from '@/views/TicketsBilling.vue';
-import BillingInfo from '@/views/BillingInfo.vue';
-import Authenticate from '@/views/Authenticate.vue';
-import Dashboard from '@/views/Dashboard.vue';
-import TicketDetail from '@/views/TicketDetail.vue';
-import Notfound from '@/views/404.vue';
-import CompaniesPage from '@/views/CompaniesPage.vue';
+ 
+import Dashboard from '@/views/Dashboard.vue'; 
+import Notfound from '@/views/404.vue'; 
 import { useAuthenticate } from "../store/Authenticate";
+import Login from '../views/Login.vue';
+import Leaderboard from '../views/Leaderboard.vue';
+import  Profile from '../views/Profile.vue';
 
 const redirectToHomeOnLoggedIn = (to, from, next) => {
   if (useAuthenticate().isLoggedIn) next({ name: "index" });
@@ -28,42 +26,24 @@ const router = createRouter({
       component: Dashboard,
       meta: { requireAuth: true }
     },
+     
+     
     {
-      path: '/tickets-billing',
-      name: 'tickets-billing',
-      component: TicketsBilling,
-      meta: { requireAuth: true } // Requires authentication
+      path: '/login',
+      name: 'login',
+      component: Login
+    },
+
+    {
+      path: '/leadersboard',
+      name: 'leadersboard',
+      component: Leaderboard
     },
     {
-      path: '/billing-info',
-      name: 'billing-info',
-      component: BillingInfo,
-      meta: { requireAuth: true } // Requires authentication
-    },
-    {
-      path: '/auth',
-      name: 'authenticate',
-      component: Authenticate
-    },
-    {
-      path: '/CompanyDetail',
-      name: 'CompanyDetail',
-      component: CompanyDetail,
-      props: (route) => ({ tableData: route.params.tableData }),
-      meta: { requireAuth: true } // Requires authentication
-    },
-    {
-      path: '/ticket-details',
-      name: 'ticketsDetail',
-      component: TicketDetail,
-      meta: { requireAuth: true } // Requires authentication
-    },
-    {
-      path: '/companies-page',
-      name: 'companiesPage',
-      component: CompaniesPage,
-      meta: { requireAuth: true } // Requires authentication
-    },
+      path: '/profile',
+      name: 'profile',
+      component: Profile
+    }, 
     {
       path: '/:catchAll(.*)',
       component: Notfound
@@ -71,12 +51,12 @@ const router = createRouter({
   ]
 });
 
-router.beforeEach((to, from, next) => {
-  if (to.meta.requireAuth && !isAuthenticated()) {
-    next({ name: "authenticate" }); // Redirect to login page if not logged in
-  } else {
-    next(); // Proceed with navigation
-  }
-});
+// router.beforeEach((to, from, next) => {
+  // if (to.meta.requireAuth && !isAuthenticated()) {
+    // next({ name: "authenticate" }); // Redirect to login page if not logged in
+  // } else {
+    // next(); // Proceed with navigation
+  // }
+// });
 
 export default router;
