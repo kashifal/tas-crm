@@ -4,6 +4,7 @@
     <Server />
     <Configure />
     <StickyTable />
+    <RefreshProxy />
     </div>
 
     <!-- absolute  div -->
@@ -32,6 +33,7 @@
 import Server from "@/components/customizeComponents/a/Server.vue";
 import Configure from "@/components/customizeComponents/a/Configure.vue";
 import StickyTable from "@/components/customizeComponents/a/StickyTable.vue";
+import RefreshProxy from '@/components/customizeComponents/a/RefreshProxy.vue';
 
 
 
