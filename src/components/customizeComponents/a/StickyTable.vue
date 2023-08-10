@@ -2,7 +2,10 @@
 <div class="">
 <div class="sm:flex sm:items-center">
       <div class="sm:flex-auto">
+        <div class="flex items-center gap-2">
+        <div class="h-5 w-5 bg-darkPrimary flex items-center justify-center text-xs text-white rounded-full">2</div>
         <h1 class="text-base font-semibold leading-6 text-gray-900">Choose Location of Proxies</h1>
+        </div>
         <p class="mt-2 text-sm text-gray-700">You have <a href="#" class="text-darkPrimary">1,000</a> worldwide proxies left. If you do not choose specific countries, your proxies will be assigned from all around the world.</p>
       </div>
        
@@ -47,7 +50,7 @@
                       'whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6 lg:pl-8',
                     ]"
                   >
-                    {{ person.name }}
+                    {{person.flag}} {{ person.name }}
                   </td>
                   <td
                     :class="[
@@ -67,7 +70,7 @@
                       'whitespace-nowrap hidden px-3 py-4 text-sm text-gray-500 lg:table-cell',
                     ]"
                   >
-                   <input type="number" class="px-2 py-2 w-full border focus:outline-none focus:border focus:border-darkPrimary rounded-sm" name="" id="">
+                   <input type="number" v-model="value" class="px-2 py-2 border-gray-400 rounded-md w-full border focus:outline-none focus:border focus:border-darkPrimary" name="" id="">
                   </td>
                    
                 </tr>
@@ -82,19 +85,36 @@
 </template>
 
 <script setup>
+import {ref} from 'vue';
+
+const value =   ref(0);
 const people = [
   {
-    name: "Lindsay Walton",
-    title: "Front-end Developer",
-    email: "lindsay.walton@example.com",
-    role: "Member",
+    name: "Pakistan",
+    flag:'🇵🇰',
+    title: "Front-end Developer",  
   },
-  {
-    name: "Lindsay Walton",
-    title: "Front-end Developer",
-    email: "lindsay.walton@example.com",
-    role: "Member",
+   {
+    name: "India",
+    flag:'🇮🇳',
+    title: "Front-end Developer",  
   },
+   {
+    name: "Pakistan",
+    flag:'🇵🇰',
+    title: "Front-end Developer",  
+  },
+   {
+    name: "China",
+    flag:'🇨🇳',
+    title: "Front-end Developer",  
+  },
+   {
+    name: "Portugual",
+    flag:'🇵🇹',
+    title: "Front-end Developer",  
+  },
+   
   
   // More people...
 ];

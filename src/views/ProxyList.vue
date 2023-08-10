@@ -1,8 +1,16 @@
 <template>
-  <div class="px-4 lg:px-8">
+  <div class="px-4 lg:px-16">
+    <div class="flex sm:flex-row flex-col  sm:items-center my-4 justify-between">
     <h1 class="text-xl font-semibold pb-4 text-gray-800"> <span v-if="currentTab  ===  0"> Proxy List</span>
     <span v-else-if="currentTab  ===  1"> Replaced Proxies</span>
     </h1>
+
+
+    <div class="flex items-center gap-6">
+    <p class="  text-sm">30 proxies in your plan </p>
+      <router-link to="#" class="px-4 py-2 bg-darkPrimary  rounded-md text-white">Upgrade</router-link>
+    </div>
+    </div>
 
     <div class="mx-auto bg-white max-w-7xl lg:flex lg:gap-x-16 lg:px-8">
       <div
