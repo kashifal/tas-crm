@@ -1,18 +1,32 @@
 <template>
-  <div>
-    <Layout>
-  
-        <router-view></router-view>
+
+<span v-if="login ===  true">
+  <layout>
+    <router-view></router-view>
+  </layout>
+</span>
+<span v-else-if="login ===  false">
  
-    </Layout>
-  </div>
+    <router-view></router-view>
+  
+</span>
+
 </template>
 
 <script setup>
-import Layout from "@/components/Layout.vue";
+import layout from "@/Layout/layout.vue";
+import { ref } from "vue";
+import { useRouter } from "vue-router";
+
+
+const login  = true;
+
+const router = useRouter();
+const currentRoute = ref(router.currentRoute.value);
+const path = currentRoute.value.fullPath;
 </script>
 
-<style  scoped>
+<style scoped>
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.6s ease-in-out;

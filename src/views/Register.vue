@@ -9,7 +9,7 @@
 
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
       <div class="bg-white px-6 py-6 shadow sm:rounded-lg sm:px-12">
-      <h1 class="leading-loose text-xl py-4 font-semibold text-gray-800">Welcome Back</h1>
+      <h1 class="leading-loose text-xl py-4 font-semibold text-gray-800">Start Your Free Trial</h1>
        <div class="mt-2 grid grid-cols-1 gap-4">
              
 
@@ -18,7 +18,7 @@
               class="flex w-full items-center justify-center gap-3 rounded-md bg-white px-3 py-2 text-gray-900 focus-visible:outline border  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#24292F]"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27c3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10c5.35 0 9.25-3.67 9.25-9.09c0-1.15-.15-1.81-.15-1.81Z"/></svg>
-              <span class="text-sm font-medium tracking-wider leading-6">SIGN IN WITH GOOGLE</span>
+              <span class="text-sm font-medium tracking-wider leading-6">SIGN UP WITH GOOGLE</span>
             </a>
           </div>
 
@@ -70,14 +70,15 @@
             </div>
           </div>
 
-          <div class="flex items-center justify-end">
+          <div class="flex items-center justify-center py-3">
             
 
-            <div class="text-sm leading-6">
+            <div class="text-xs  leading-6">
+            By signing up, you agree to the 
               <a
                 href="#"
-                class="font-normal text-primary hover:text-darkPrimary"
-                >Forgot password?</a
+                class="font-light text-primary hover:text-darkPrimary"
+                >Terms of Service</a
               >
             </div>
           </div>
@@ -95,10 +96,10 @@
             
 
             <div class="text-sm leading-6">
-             Need an account? <router-link 
-                to="/register"
+             Already a member? <router-link 
+                to="/login"
                 class="font-normal text-primary hover:text-darkPrimary"
-                >Sign up</router-link
+                >Sign in</router-link
               >
             </div>
           </div>
