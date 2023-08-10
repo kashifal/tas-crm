@@ -5,7 +5,12 @@ import Notfound from '@/views/404.vue';
 import { useAuthenticate } from "../store/Authenticate";
 import Login from '../views/Login.vue';
 import Leaderboard from '../views/Leaderboard.vue';
-import  Profile from '../views/Profile.vue';
+import  Profile from '@/views/Profile.vue';
+import ProxyList from '@/views/ProxyList.vue'
+import ProxySettings from '@/views/ProxySettings.vue';
+import  Register from '@/views/Register.vue';
+import Customizze from '@/views/Customizze.vue'
+import Components from '@/views/Components.vue'
 
 const redirectToHomeOnLoggedIn = (to, from, next) => {
   if (useAuthenticate().isLoggedIn) next({ name: "index" });
@@ -35,14 +40,35 @@ const router = createRouter({
     },
 
     {
-      path: '/leadersboard',
-      name: 'leadersboard',
-      component: Leaderboard
+      path: '/register',
+      name: 'register',
+      component: Register
+    },
+
+    {
+      path: '/proxy-list',
+      name: 'proxylist',
+      component: ProxyList
     },
     {
       path: '/profile',
       name: 'profile',
       component: Profile
+    }, 
+    {
+      path: '/proxy-settings',
+      name: 'proxysettings',
+      component: ProxySettings
+    }, 
+    {
+      path: '/customize',
+      name: 'customize',
+      component: Customizze
+    }, 
+    {
+      path: '/components',
+      name: 'components',
+      component: Components
     }, 
     {
       path: '/:catchAll(.*)',
@@ -51,12 +77,6 @@ const router = createRouter({
   ]
 });
 
-// router.beforeEach((to, from, next) => {
-  // if (to.meta.requireAuth && !isAuthenticated()) {
-    // next({ name: "authenticate" }); // Redirect to login page if not logged in
-  // } else {
-    // next(); // Proceed with navigation
-  // }
-// });
+ 
 
 export default router;

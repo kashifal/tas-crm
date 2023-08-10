@@ -1,180 +1,301 @@
 <template>
-  <div class="space-y-6 md:space-y-8 max-w-7xl mx-auto">
-    <div class="flex flex-col items-center">
-      <div class="w-full md:w-[75%] space-y-2 my-20">
-        <div
-          class="text-center p-2 rounded-md text-white text-3xl tracking-wide font-title"
-        >
-          Welcome to the new Overbuff!
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div class="flex flex-col space-y-2 items-center">
-            <div class="inline-flex rounded-full bg-primary text-white p-1">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-                class="w-3 h-3"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M4.5 12.75l6 6 9-13.5"
-                ></path>
-              </svg>
-            </div>
-            <div class="text-xs md:text-sm text-white font-bold uppercase">
-              OW 2 Support
-            </div>
-          </div>
-          <div class="flex flex-col space-y-2 items-center">
-            <div class="inline-flex rounded-full bg-primary text-white p-1">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-                class="w-3 h-3"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M4.5 12.75l6 6 9-13.5"
-                ></path>
-              </svg>
-            </div>
-            <div class="text-xs md:text-sm font-bold text-white uppercase">New Heroes</div>
-          </div>
-          <div class="flex flex-col space-y-2 items-center">
-            <div class="inline-flex rounded-full bg-primary text-white p-1">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-                class="w-3 h-3"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M4.5 12.75l6 6 9-13.5"
-                ></path>
-              </svg>
-            </div>
-            <div class="text-xs text-white md:text-sm font-bold uppercase">
-              Added Stats
-            </div>
-          </div>
-          <div class="flex flex-col space-y-2 items-center">
-            <div class="inline-flex rounded-full bg-primary text-white p-1">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-                class="w-3 h-3"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M4.5 12.75l6 6 9-13.5"
-                ></path>
-              </svg>
-            </div>
-            <div class="text-xs text-white md:text-sm font-bold uppercase">
-              Improved Rankings
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="w-full text-center ">
-      <form method="get" action="/search" class="">
-        <input
-          name="q"
-          type="text"
-          placeholder="Find players by BattleTag#1234..."
-          class="bg-black border-primary border-2 border-solid text-white text-xl p-4 rounded-md shadow-lg focus:outline-none w-full md:w-[75%]"
-          value=""
-        />
-      </form>
-    </div>
-    <div class="h-12 flex justify-center items-center">
-      <a rel="nofollow" href="/auth"
-        ><button
-          type="button"
-          class="flex flex-nowrap justify-center items-center py-2 px-2.5 rounded shadow-lg gap-x-1 font-medium text-sm sm:text-base bg-primary text-lighter"
-          tabindex="0"
-          style="opacity: 1; transform: none"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            aria-hidden="true"
-            class="inline w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
-            ></path></svg
-          ><span class="whitespace-nowrap leading-none st-current"
-            >Sign in with Battle.net to see your stats!</span
-          >
-        </button></a
+  <div class="px-4 lg:px-8">
+  <h1 class="text-xl font-semibold pb-4 text-gray-800">Account Settings</h1>
+  <div
+    class="mx-auto border border-gray-300 bg-white max-w-7xl lg:flex lg:gap-x-16 lg:px-8"
+  >
+    <main class="px-4 py-8 sm:px-6 lg:flex-auto lg:px-0 lg:py-8">
+      <div
+        class="mx-auto max-w-2xl space-y-16 sm:space-y-20 lg:mx-0 lg:max-w-none"
       >
-    </div>
-    <div class="space-y-4">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div class="h-96  overflow-hidden ">
-          <img :src="image1" class="object-cover w-full cursor-pointer hover:scale-110 duration-200 transition-all h-full" alt="">
+        <div>
+          <h2 class="text-xl font-semibold leading-7 text-gray-900">Profile</h2>
+
+          <dl
+            class="mt-6 space-y-6 divide-y divide-gray-100 border-t border-gray-200 text-sm leading-6"
+          >
+            <div class="pt-6 sm:flex">
+              <dt
+                class="font-medium text-gray-900 sm:w-64 sm:flex-none sm:pr-6"
+              >
+                Email
+              </dt>
+              <dd
+                class="mt-1 flex justify-between gap-x-6 sm:mt-0 sm:flex-auto"
+              >
+                <div class="text-gray-900">tom.cook@example.com</div>
+                <button
+                  type="button"
+                  class="font-normal text-primary hover:text-primary"
+                >
+                  Edit
+                </button>
+              </dd>
+            </div>
+            <div class="pt-6 sm:flex">
+              <dt
+                class="font-medium text-gray-900 sm:w-64 sm:flex-none sm:pr-6"
+              >
+                Password
+              </dt>
+              <dd
+                class="mt-1 flex justify-between gap-x-6 sm:mt-0 sm:flex-auto"
+              >
+                <div class="text-gray-900">********</div>
+                <button
+                  type="button"
+                  class="font-normal text-primary hover:text-primary"
+                >
+                  Edit
+                </button>
+              </dd>
+            </div>
+
+            <div class="pt-6 sm:flex">
+              <dt
+                class="font-medium text-gray-900 sm:w-64 sm:flex-none sm:pr-6"
+              >
+                Timezone
+              </dt>
+              <dd
+                class="mt-1 flex justify-between gap-x-6 sm:mt-0 sm:flex-auto"
+              >
+                <Select />
+              </dd>
+            </div>
+          </dl>
         </div>
-        <div class="overflow-hidden">
-          <img :src="image2" class="bject-cover w-full cursor-pointer hover:scale-110 duration-200 transition-all h-full" alt="">
+
+        <div>
+          <ul role="list" class="mt-6 border-gray-200 text-sm leading-6">
+            <dl
+              class="mt-6 space-y-6 divide-gray-100 border-t border-gray-200 text-sm leading-6"
+            >
+              <div class="pt-6 sm:flex">
+                <dt
+                  class="font-medium text-gray-900 sm:w-64 sm:flex-none sm:pr-6"
+                >
+                  Dashboard Notification
+                  <p class="text-xs text-gray-400 font-light">
+                    Status update emaills
+                  </p>
+                </dt>
+                <dd
+                  class="mt-1 flex justify-between gap-x-6 sm:mt-0 sm:flex-auto"
+                >
+                  <fieldset>
+                    <legend class="sr-only">Notifications</legend>
+                    <div class="space-y-5">
+                      <div class="relative flex items-start">
+                        <div class="flex h-6 items-center">
+                          <input
+                            id="comments"
+                            aria-describedby="comments-description"
+                            name="comments"
+                            type="checkbox"
+                            class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"
+                          />
+                        </div>
+                        <div class="ml-3 text-sm leading-6">
+                          <label
+                            for="comments"
+                            class="font-medium text-gray-900"
+                            >Bandwidth use alert when close to limit</label
+                          >
+                        </div>
+                      </div>
+                      <div class="relative flex items-start">
+                        <div class="flex h-6 items-center">
+                          <input
+                            id="candidates"
+                            aria-describedby="candidates-description"
+                            name="candidates"
+                            type="checkbox"
+                            class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"
+                          />
+                        </div>
+                        <div class="ml-3 text-sm leading-6">
+                          <label
+                            for="candidates"
+                            class="font-medium text-gray-900"
+                            >Subscription notifications when renewal
+                            fails</label
+                          >
+                        </div>
+                      </div>
+                      <div class="relative flex items-start">
+                        <div class="flex h-6 items-center">
+                          <input
+                            id="offers"
+                            aria-describedby="offers-description"
+                            name="offers"
+                            type="checkbox"
+                            class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"
+                          />
+                        </div>
+                        <div class="ml-3 text-sm leading-6">
+                          <label for="offers" class="font-medium text-gray-900"
+                            >Proxy use statistics (1 email/month)</label
+                          >
+                        </div>
+                      </div>
+                      <div class="relative flex items-start">
+                        <div class="flex h-6 items-center">
+                          <input
+                            id="offers"
+                            aria-describedby="offers-description"
+                            name="offers"
+                            type="checkbox"
+                            class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"
+                          />
+                        </div>
+                        <div class="ml-3 text-sm leading-6">
+                          <label for="offers" class="font-medium text-gray-900"
+                            >Proxy warnings for any anomalies</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </dd>
+              </div>
+              <div class="pt-6 sm:flex">
+                <dt
+                  class="font-medium text-gray-900 sm:w-64 sm:flex-none sm:pr-6"
+                >
+                  Marketing Emails
+                  <p class="text-xs text-gray-400 font-light">
+                    Useful guides & surveys
+                  </p>
+                </dt>
+                <dd
+                  class="mt-1 flex justify-between gap-x-6 sm:mt-0 sm:flex-auto"
+                >
+                  <fieldset>
+                    <legend class="sr-only">Notifications</legend>
+                    <div class="space-y-5">
+                      <div class="relative flex items-start">
+                        <div class="flex h-6 items-center">
+                          <input
+                            id="comments"
+                            aria-describedby="comments-description"
+                            name="comments"
+                            type="checkbox"
+                            class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"
+                          />
+                        </div>
+                        <div class="ml-3 text-sm leading-6">
+                          <label
+                            for="comments"
+                            class="font-medium text-gray-900"
+                            >Guides & Tips/Tricks (~1 mail/month)</label
+                          >
+                        </div>
+                      </div>
+                      <div class="relative flex items-start">
+                        <div class="flex h-6 items-center">
+                          <input
+                            id="candidates"
+                            aria-describedby="candidates-description"
+                            name="candidates"
+                            type="checkbox"
+                            class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"
+                          />
+                        </div>
+                        <div class="ml-3 text-sm leading-6">
+                          <label
+                            for="candidates"
+                            class="font-medium text-gray-900"
+                            >Surveys (~1 mail/month)</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </dd>
+              </div>
+            </dl>
+          </ul>
         </div>
-        <div class="overflow-hidden">
-          <img :src="image3" class="bject-cover w-full cursor-pointer hover:scale-110 duration-200 transition-all h-full" alt="">
+
+        <div>
+          <dl
+            class="mt-6 space-y-6 divide-y divide-gray-100 border-t border-gray-200 text-sm leading-6"
+          >
+            <div class="pt-6 sm:flex">
+              <dt
+                class="font-medium text-gray-900 sm:w-64 sm:flex-none sm:pr-6"
+              >
+                Account Created
+              </dt>
+              <dd
+                class="mt-1 flex justify-between gap-x-6 sm:mt-0 sm:flex-auto"
+              >
+                August 07, 2023
+              </dd>
+            </div>
+            <div class="pt-6 sm:flex">
+              <dt
+                class="font-medium text-gray-900 sm:w-64 sm:flex-none sm:pr-6"
+              >
+                Manage Account
+              </dt>
+              <dd
+                class="mt-1 flex justify-between gap-x-6 sm:mt-0 sm:flex-auto"
+              >
+                <button
+                  type="button"
+                  class="font-normal rounded-sm hover:bg-red-600 text-xs hover:text-white text-red-600 border border-red-600 px-3 py-1.5"
+                >
+                  DELETE ACCOUNT
+                </button>
+              </dd>
+            </div>
+          </dl>
         </div>
       </div>
-      <div class="text-center  text-xs text-white uppercase">
-        Stats from games played this month on PC
-      </div>
-    </div>
+    </main>
+  </div>
   </div>
 </template>
 
-<script setup> 
-import { ref, onMounted } from "vue";
-import client from "../axios.config";
-import image1 from '@/assets/images/image1.jpeg';
-import image2 from '@/assets/images/image20.png';
-import image3 from '@/assets/images/image30.png';
+<script setup>
+import { ref } from "vue";
+import {
+  Dialog,
+  DialogPanel,
+  Switch,
+  SwitchGroup,
+  SwitchLabel,
+} from "@headlessui/vue";
+import { Bars3Icon } from "@heroicons/vue/20/solid";
+import {
+  BellIcon,
+  CreditCardIcon,
+  CubeIcon,
+  FingerPrintIcon,
+  UserCircleIcon,
+  UsersIcon,
+  XMarkIcon,
+} from "@heroicons/vue/24/outline";
 
-const barObj = ref({});
+import Select from "@/components/Select.vue";
 
-onMounted(async () => {
-  try {
-    const response = await client.get("/Chart/TicketChart");
-    // console.log(response.TotalClosedTickets, 'n');
-    barObj.value = response;
+const navigation = [
+  { name: "Home", href: "#" },
+  { name: "Invoices", href: "#" },
+  { name: "Clients", href: "#" },
+  { name: "Expenses", href: "#" },
+];
+const secondaryNavigation = [
+  { name: "General", href: "#", icon: UserCircleIcon, current: true },
+  { name: "Security", href: "#", icon: FingerPrintIcon, current: false },
+  { name: "Notifications", href: "#", icon: BellIcon, current: false },
+  { name: "Plan", href: "#", icon: CubeIcon, current: false },
+  { name: "Billing", href: "#", icon: CreditCardIcon, current: false },
+  { name: "Team members", href: "#", icon: UsersIcon, current: false },
+];
 
-    console.log(barObj.value);
-  } catch (error) {
-    console.error(error);
-  }
-});
+const mobileMenuOpen = ref(false);
+const automaticTimezoneEnabled = ref(true);
 </script>
-
-<style lang="scss" scoped></style>
