@@ -3,10 +3,11 @@
     <div class="px-4 lg:px-8">
     <Server />
     <Configure />
-    <div v-if="tab.load ===  false" class="">
+    <div    class="">
     <StickyTable />
-    <RefreshProxy />
+   
     </div>
+     <RefreshProxy />
     </div>
 
     <!-- absolute  div -->

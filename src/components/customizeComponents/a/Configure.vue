@@ -1,6 +1,7 @@
 <template>
   <fieldset class="my-12">
-    <legend class="text-sm mb-4">CONFIGURE PROXY SERVER</legend>
+    <div  v-if="tabStore.proxy !== 3" class="">
+    <legend class="text-sm mb-4">{{tabStore.proxy === 2 ? 'CONFIGURE STATIC RESIDENTIAL' : 'CONFIGURE PROXY SERVER'}}</legend>
     <div class="space-y-8">
       <div class="relative flex items-start">
         <div class="flex h-6 items-center">
@@ -88,9 +89,9 @@
           </p>
         </div>
       </div>
-    </div>
+    </div></div>
 
-    <Listbox v-if="tabStore.currentTab !== 4" as="div" class="mt-16" v-model="selected">
+    <Listbox v-if="tabStore.currentTab !== 4" as="div" class="[tabStore.proxy !== 3' ? 'mt-16' : '']" v-model="selected">
       <div class="relative mt-2">
         <p class="text-sm text-gray-900 mt-2 ml-1">PROXY NUMBER</p>
 
