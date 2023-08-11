@@ -1,6 +1,7 @@
 <template>
   <fieldset class="my-12">
-    <Listbox as="div" class="mt-16" v-model="selected">
+   <div class="">
+    <Listbox as="div" v-if="tab.currentTab !== 4" class="mt-16" v-model="selected">
       <div class="flex items-center gap-2">
         <div
           class="h-5 w-5 bg-darkPrimary flex items-center justify-center text-xs text-white rounded-full"
@@ -227,6 +228,7 @@
         </transition>
       </div>
     </Listbox>
+    </div>
 
     <div class="mt-8">
       <div class="flex items-center gap-2">
@@ -387,6 +389,10 @@ import {
   ListboxOptions,
 } from "@headlessui/vue";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/vue/20/solid";
+import  {useTab} from '../../../store/tab';
+
+const tab = useTab();
+ 
 
 const people = [
   { id: 1, name: "Pakistan" },
