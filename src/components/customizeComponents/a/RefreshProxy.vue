@@ -342,9 +342,10 @@
 
         </div>
         <div
+        v-if="tab.proxy !== 3"
           class="relative flex items-center justify-between hover:bg-gray-100 px-4 cursor-pointer py-3 rounded-sm"
         >
-          <div class="flex items-start">
+          <div class="flex items-start"  >
           <div class="flex h-6 items-center">
             <input
               id="verified"

@@ -13,7 +13,7 @@
      <p></p>
       <div class="border-b border-gray-200">
         <nav class="-mb-px w-fulll overflow-scroll max-w-full  flex justify" aria-label="Tabs">
-          <a v-for="tab in tabs" :key="tab.name" :href="tab.href" :class="[tab.current ? 'border-darkPrimary text-darkPrimary' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700', 'sm:w-[33.33%] w-[200px]    border-b-2 mt-4  py-8 px-1 text-center text-sm font-medium']" :aria-current="tab.current ? 'page' : undefined" @click="() => setTab(tab.name)">
+          <a v-for="(tab,index) in tabs" :key="tab.name" :href="tab.href" :class="[tab.current ? 'border-darkPrimary text-darkPrimary' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700', 'sm:w-[33.33%] w-[200px]    border-b-2 mt-4  py-8 px-1 text-center text-sm font-medium']" :aria-current="tab.current ? 'page' : undefined" @click="() => setTab(tab.name,index)">
             <div :class="[tab.current ? 'border border-darkPrimary shadow-lg bg-white' : 'border border-gray-300 ' ,  ' w-[100%] overflow-hidden relative  px-3 py-2 rounded-lg ']">
             <!-- Tabs -->
             <span v-if="tab.current" class="absolute right-0 top-0 p-2 bg-darkPrimary">
@@ -41,6 +41,7 @@
 
 <script setup>
 import { ref } from "vue";
+import {useTab} from '../../../store/tab';
 
 const tabs = ref([
   { name: 'Proxy Server', href: '#', current: true, desc:'Fast & Affordable datacenter proxies', price:'2.99', discount:false },
@@ -49,9 +50,16 @@ const tabs = ref([
 ]);
 
 
+const  tab = useTab();
+
+
+
+
+
 const currentTab = ref(0); 
 
-function setTab(tabName) {
+function setTab(tabName,index) {
+  tab.setProxy(index+1);
   if(tabName  === 'Proxy Server'){
     currentTab.value = 0
   }else if(tabName  === 'Static Residential'){

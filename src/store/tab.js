@@ -3,7 +3,8 @@ import { defineStore } from "pinia";
 export const useTab = defineStore('tabs', {
     state: () => ({
         currentTab: 0,
-        load:true
+        load:true,
+        proxy:0
        
     }),
     actions: {
@@ -11,13 +12,13 @@ export const useTab = defineStore('tabs', {
         setTab(index) {
             
                 this.currentTab = index; 
-                console.log(index);
-
-                setTimeout(() => {
-                    this.load  = false
-                }, 3000)
-            
+                console.log(index); 
         },
+
+        setProxy(proxyIndex){
+            this.proxy =  proxyIndex;
+            console.log(this.proxy ,'proxy');
+        }
         
          
     },
