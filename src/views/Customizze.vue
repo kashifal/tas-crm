@@ -3,8 +3,10 @@
     <div class="px-4 lg:px-8">
     <Server />
     <Configure />
+    <div v-if="tab.load ===  false" class="">
     <StickyTable />
     <RefreshProxy />
+    </div>
     </div>
 
     <!-- absolute  div -->
@@ -34,9 +36,10 @@ import Server from "@/components/customizeComponents/a/Server.vue";
 import Configure from "@/components/customizeComponents/a/Configure.vue";
 import StickyTable from "@/components/customizeComponents/a/StickyTable.vue";
 import RefreshProxy from '@/components/customizeComponents/a/RefreshProxy.vue';
+import {useTab} from '../store/tab';
 
 
-
+const tab  = useTab();
 
 
 
