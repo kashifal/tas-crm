@@ -23,7 +23,7 @@
                 Replace
               </button>
             </div>
-            <table class="max-w-full divide-y   divide-gray-300">
+            <table class="min-w-full divide-y   divide-gray-300">
               <thead>
                 <tr>
                   <th scope="col" class="relative px-7 sm:w-12 sm:px-6">
