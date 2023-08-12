@@ -1,5 +1,5 @@
 <template>
-  <div class="px-4 lg:px-16">
+  <div class="px-4 lg:px-8">
     <div class="flex sm:flex-row flex-col  sm:items-center my-4 justify-between">
     <h1 class="text-xl font-semibold pb-4 text-gray-800"> <span v-if="currentTab  ===  0"> Proxy List</span>
     <span v-else-if="currentTab  ===  1"> Replaced Proxies</span>
@@ -261,7 +261,7 @@
 
 
     <div
-      class="mx-auto border mt-12  bg-white max-w-7xl lg:flex lg:gap-x-16 lg:px-8"
+      class=" border mt-12  bg-white  w-full min-w-full lg:gap-x-16  "
     >
       <main class="px-4 py-8 sm:px-6 lg:flex-auto lg:px-0 lg:py-8">
         <div
