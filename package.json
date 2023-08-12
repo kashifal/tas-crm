@@ -13,6 +13,7 @@
     "@heroicons/vue": "^2.0.17",
     "axios": "^1.4.0",
     "chart.js": "^4.3.0",
+    "floating-vue": "^2.0.0-beta.24",
     "pinia": "^2.0.33",
     "quasar": "^2.12.4",
     "vue": "^3.2.45",
